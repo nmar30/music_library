@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "b4f1bd9f-60a0-4ca6-b588-f02f66518384",
+		"name": "Music_Library_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_All_Songs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Song",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Song 3\",\r\n    \"artist\": \"Artist 3\",\r\n    \"album\": \"Album 3\",\r\n    \"release_date\": \"2021-05-14\",\r\n    \"likes\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_By_Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put_By_Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_By_Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_Like",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/add_like/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"add_like",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
