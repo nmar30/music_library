@@ -4,6 +4,7 @@ from .serializers import SongSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import Http404
 
 # Create your views here.
 class SongList(APIView):
@@ -43,5 +44,6 @@ class SongDetails(APIView):
 
     def delete(self, request, pk):
         song = self.get_object(pk)
+        serializer = SongSerializer(song)
         song.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
